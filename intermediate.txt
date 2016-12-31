@@ -1,0 +1,14 @@
+      1000      TRANS      START       1000 
+      1000      FIRST        LDX       ZERO 
+      1003      TLOOP         TD      INDEV 
+      1006          -        JEQ      TLOOP 
+      1009          -         RD      INDEV 
+      100c          -       STCH   RECORD,X 
+      100f          -        TIX        TEN 
+      1012          -        JLT      TLOOP 
+      1015       ZERO       WORD          0 
+      1018        TEN       WORD         10 
+      101b      INDEV       BYTE      X'F1' 
+      101c     RECORD       RESB         10 
+      1026          -        END      FIRST 
+length = 26
